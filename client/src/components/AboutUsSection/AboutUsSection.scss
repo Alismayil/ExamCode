@@ -1,0 +1,117 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include MyFlex();
+#aboutUsSection{
+    height: 90vh;
+    padding: 50px 400px;
+    @include MyFlex();
+    gap: 30px;
+    .leftbox{
+        background-color: orange;
+        width: 70%;
+        height: 90%;
+        background-image: url(https://preview.colorlib.com/theme/selling/images/about_1.jpg);
+        background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: end;
+align-items: end;
+    .altBox{
+        background-color: #46DDB0;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        color: white;
+margin-bottom: -10px;
+margin-right: -10px;
+        h1{
+            font-size: 50px;
+        }
+    }
+    }
+    .rightBox{
+        background-color: white;
+        width: 30%;
+        height: 70%;
+    @include MyFlex();
+
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+    padding: 0px 20px;
+  
+    p{
+        color: gray;
+    }
+    h1{
+        color: black;
+        font-size: 40px;
+    }
+    span{
+        color: gray;
+        margin: 20px 0px;
+        max-width: 80%;
+    }
+    button {
+        background-color: black;
+        font-size: 15px;
+        width: 150px;
+        height: 40px;
+        border: 2px solid white;
+        color: white;
+    }
+
+    button:hover {
+        background-color: #fff;
+        color: black;
+        cursor: pointer;
+        border: 2px solid black;
+
+    }
+
+    }
+}
+@media only screen and (max-width: 1519px) {
+    #aboutUsSection{
+        padding: 50px 100px;
+    }
+}
+@media only screen and (max-width: 939px) {
+    #aboutUsSection{
+        padding: 50px 20px;
+        @include MyFlex();
+        flex-direction: column;
+        .leftbox{
+            width: 300px;
+            height: 300px;
+            .altBox{
+                margin-right: 0px;
+                h1{
+                    font-size: 20px;
+                }
+            }
+        }
+        .rightBox{
+            width: 80%;
+        }
+    }
+}
+@media only screen and (max-width: 419px) {
+    #aboutUsSection{
+        padding: 50px 10px;
+        .leftbox{
+            width: 270px;
+            height: 270px;
+        }
+        .rightBox{
+            width: 270px;
+        }
+    }
+}

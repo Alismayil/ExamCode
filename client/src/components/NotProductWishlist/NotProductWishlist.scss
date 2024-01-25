@@ -1,0 +1,15 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include MyFlex();
+.notProductWishlist{
+    height: 70vh;
+    background-color: #F6F6F6;
+    @include MyFlex();
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}

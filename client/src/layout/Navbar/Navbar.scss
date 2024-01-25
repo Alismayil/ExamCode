@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include MyFlex();
+nav {
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    padding: 15px 400px;
+    @include MyFlex();
+    justify-content: space-between;
+    z-index: 5;
+
+    .iconBox {
+        h1 {
+            display: flex;
+            font-size: 60px;
+
+            p {
+                color: #f16821;
+            }
+        }
+
+    }
+
+    ul {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        font-size: 20px;
+
+        li {
+            .link {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+                position: relative;
+                .length{
+                    border: 1px solid black;
+                    width: 20px;
+                    height: 20px;
+                    font-size: 15px;
+                    @include MyFlex();
+                    border-radius: 50%;
+                    position: absolute;
+                    top: -10px;
+                    right: -10px;
+                    background-color: white;
+                }
+            }
+
+            .link:hover {
+                color: #f16821;
+            }
+        }
+    }
+
+    .menuBox {
+        display: none;
+        font-size: 30px;
+    }
+
+    .respNav {
+        display: none;
+    }
+    .open{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1519px) {
+    nav {
+        padding: 15px 100px;
+    }
+}
+
+@media only screen and (max-width: 939px) {
+    nav {
+        padding: 15px 100px;
+        position: relative;
+
+        ul {
+            display: none;
+        }
+
+        .menuBox {
+            display: block;
+        }
+
+        .respNav {
+            // display: block;
+            position: absolute;
+            top: 0;
+            right: 0px;
+            background-color: white;
+            width: 40%;
+            height: 101vh;
+            padding: 50px;
+
+            .deletebox{
+                position: absolute;
+                top: 20px;
+                right: 50px;
+                font-size: 40px;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                font-size: 30px;
+
+            }
+        }
+    }
+}
+@media only screen and (max-width: 650px) {
+    nav {
+        padding:15px 10px ;
+        .respNav {
+            background-color: blue;
+            width: 102%;
+            right: -5px;
+        }
+    }
+
+}
+@media only screen and (max-width: 600px) {
+
+
+    
+}

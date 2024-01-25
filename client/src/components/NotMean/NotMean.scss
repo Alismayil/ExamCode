@@ -1,0 +1,10 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include MyFlex();
+.notMean{
+    height: 100px;
+}

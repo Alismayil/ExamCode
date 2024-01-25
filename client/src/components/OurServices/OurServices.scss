@@ -1,0 +1,78 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include MyFlex();
+    
+#ourServices{
+    padding: 50px 400px;
+    .upBox {
+        @include MyFlex();
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+
+        p {
+            color: gray;
+        }
+
+        span {
+            font-size: 40px;
+            color: black;
+        }
+
+    }
+    .downBox{
+        margin-top: 50px;
+        @include MyFlex();
+        flex-wrap: wrap;
+        gap:100px;
+        .cart{
+            width: 290px;
+            display: flex;
+            gap: 20px;
+            .imgBox{
+                color: #f16821;
+                font-size: 50px;
+            }
+            .textBox{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                p{
+                    font-size: 25px;
+                    color: #777777;
+                }
+                span{
+                    color: #777777;
+                }
+                button{
+                    width: 100px;
+                    cursor: pointer;
+                    color: #f16821;
+                    background-color: transparent;
+                    border: none;
+                }
+            }
+        }
+    }
+
+}
+@media only screen and (max-width: 1700px) {
+    #ourServices {
+        padding: 50px 100px;
+    }
+}
+@media only screen and (max-width: 1389px) {
+    #ourServices {
+        padding: 50px 100px;
+    }
+}
+
+@media only screen and (max-width: 1266px) {
+    #ourServices {
+        padding: 50px 10px;
+    }
+}

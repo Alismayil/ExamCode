@@ -1,0 +1,76 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include MyFlex();
+footer{
+    padding: 50px 400px;
+    .upBox{
+        gap: 100px;
+        flex-wrap: wrap;
+        @include MyFlex();
+        align-items: start;
+        .footerCart{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            p{
+                color: black;
+                font-size: 20px;
+            }
+            span{
+                color: #777777;
+            }
+            img{
+                max-width: 250px;
+            }
+            .icons{
+                display: flex;
+gap: 15px;
+color: #777777;
+i{
+    color: #777777;
+}
+i:hover{
+    color: black;
+    cursor: pointer;
+}
+
+            }
+            button {
+                background-color: black;
+                font-size: 17px;
+                width: 150px;
+                height: 40px;
+                border: 2px solid transparent;
+                color: white;
+            }
+            
+            button:hover {
+                background-color: #fff;
+                color: black;
+                cursor: pointer;
+                border: 2px solid black;
+
+            }
+        }
+    }
+    .downBox{
+        text-align: center;
+        font-size: 20px;
+        margin-top: 80px;
+        color: #777777;
+    }
+}
+@media only screen and (max-width: 1629px) {
+    footer{
+        padding: 50px 100px;
+    }
+}
+@media only screen and (max-width: 773px) {
+    footer{
+        padding: 50px 10px;
+    }
+}

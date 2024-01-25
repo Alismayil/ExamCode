@@ -1,0 +1,167 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include MyFlex();
+#ourProductSection {
+    padding: 50px 400px;
+
+    .upBox {
+        @include MyFlex();
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+
+        p {
+            color: gray;
+            max-width: 500px;
+        }
+
+        span {
+            font-size: 40px;
+            color: black;
+        }
+
+    }
+
+    .downBox {
+        margin-top: 50px;
+        display: flex;
+        gap: 100px;
+        flex-wrap: wrap;
+        @include MyFlex();
+        text-align: center;
+
+        .cartBox {
+            width: 300px;
+
+            .imgBox {
+                @include MyFlex();
+
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+
+                img {
+                    max-width: 100%;
+                    transition: 0.7s;
+
+                }
+
+                .hoverBox {
+                    opacity: 0;
+                    height: 80%;
+                    width: 80%;
+                    border: 4px solid #F16821;
+                    top: 25px;
+                    position: absolute;
+                    left: 25px;
+                    transition: 0.2s;
+
+                    z-index: 2;
+                }
+            }
+
+            .imgBox:hover {
+                img {
+                    transform: scale(1.3);
+                    transition: 0.7s;
+                }
+
+                .hoverBox {
+                    opacity: 1;
+                    transition: 0.2s;
+
+                }
+            }
+
+            .textBox {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .count {
+                    display: flex;
+                    gap: 10px;
+                    @include MyFlex();
+
+                    .countBox {
+                        @include MyFlex();
+                        gap: 10px;
+                        .star{
+                            color: gold;
+                        }
+                        .like{
+                            color: gray;
+                            cursor: pointer;
+
+                        }
+                    }
+                }
+
+                p {
+                    margin-top: 10px;
+                    font-size: 22px;
+                }
+
+                span {
+                    color: gray;
+                }
+
+                .btns {
+                    display: flex;
+                    gap: 10px;
+                    @include MyFlex();
+
+                    button {
+                        width: 80px;
+                        height: 35px;
+                        cursor: pointer;
+
+                    }
+
+                    .btn1 {
+                        background-color: black;
+                        color: white;
+                        border: transparent;
+                    }
+
+                    .btn1:hover {
+                        border: 2px solid black;
+                        color: black;
+                        background-color: transparent;
+                    }
+
+                    .btn2 {
+                        border: 2px solid black;
+                        background-color: transparent;
+                        color: black;
+                    }
+
+                    .btn2:hover {
+                        border: transparent;
+                        background-color: black;
+                        color: white;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1800px) {
+    #ourProductSection{
+        padding: 50px 50px;
+    }
+}
+@media only screen and (max-width: 913px) {
+    #ourProductSection{
+        padding: 50px 10px;
+    }
+}
+.red{
+    color: red;
+}

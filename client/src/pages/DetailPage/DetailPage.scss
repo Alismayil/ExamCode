@@ -1,0 +1,20 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include MyFlex();
+.detailPage{
+    background-color: #F6F6F6;
+    height: 70vh;
+    @include MyFlex();
+
+    .detailCart{
+        text-align: center;
+        flex-direction: column;
+        img{
+            max-width: 300px;
+        }
+    }
+}

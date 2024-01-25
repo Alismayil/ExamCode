@@ -1,0 +1,59 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//   @include MyFlex();
+.basketPage{
+    background-color: #f6f6f6;
+    display: flex;
+    padding:100px 50px ;
+    @include MyFlex();
+gap: 50px;
+position: relative;
+.subtotal{
+    position: absolute;
+    bottom: 20px ;
+    left: 20px;
+
+}
+.allDelete{
+    position: absolute;
+    top: 20px ;
+    left: 20px;
+cursor: pointer;
+}
+.basketCart{
+    width: 290px;
+    position: relative;
+
+    img{
+        max-width: 290px;
+    }
+    .delete{
+        position: absolute;
+        top: 20px ;
+        left: 0px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 30px;
+    }
+    .textBox{
+     
+       .countBox{
+        display: flex;
+        gap: 5px;
+        font-size: 20px;
+
+        button{
+            cursor: pointer;
+        font-size: 17px;
+        background-color: transparent;
+border: none;
+        }
+       } 
+    }
+}
+}
